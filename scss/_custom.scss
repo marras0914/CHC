@@ -1,0 +1,194 @@
+@charset "utf-8";
+/* CSS Document */
+
+@viewport{
+     zoom: 1.0;
+     width: device-width;
+}
+@-ms-viewport{
+     width: extend-to-zoom;
+     zoom: 1.0;
+}
+
+@mixin rounded ($radius: .8em) {
+     -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+     border-radius: $radius;
+}
+
+
+// telephone address centered in header
+.telephone {
+     margin-top: 35px;
+}
+
+// lines up header icons and styles
+// icon rotation style
+
+.icon-group{
+     a{
+     vertical-align: middle;
+     display: block;
+     margin-top: 5px;
+     -webkit-transition: -webkit-transform 0.4s ease-out; 
+    -moz-transition: -moz-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+     }
+     form{
+     vertical-align: middle;
+     display: block;
+     margin-top: 15px;
+     -webkit-transition: -webkit-transform 0.4s ease-out;
+    -moz-transition: -moz-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+     }
+     a:hover {
+     -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+    }
+    form:hover {
+     -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+     }
+}
+
+
+
+
+//  styles text in header
+header p{
+     vertical-align: 50%;
+     color: $primary-color;
+}
+
+
+
+// Centers topbar menu on desktop
+.desktop-nav {
+     nav.top-bar {
+          text-align: center;
+     }
+     section.top-bar-section {
+          display: inline-block;
+     }
+}
+
+
+// Centers navigation on mobile and aligns menu icon
+.mobile-nav {
+     nav.top-bar ul li{
+          text-align: center;
+     }
+     section.top-bar-section {
+          display: block;
+     }
+     .top-bar-section .dropdown li a{
+          display: block;
+          padding: 12px 0 12px 0;
+          
+     }
+}
+
+
+// Panel radius
+$panel-border-radius: 20px;
+
+// Side-panel styles
+.side-panel {
+    $panel-bg: scale-color($primary-color, $lightness: -5%);
+
+    @include panel();
+    border-radius: $panel-border-radius;
+}
+
+.panel.radius {
+     border-radius: $panel-border-radius;
+}
+
+// Centers images
+img {
+     display: block;
+     margin-left: auto;
+     margin-right: auto 
+}
+
+// Orbit-caption header styles
+.orbit-caption h4 h2{
+     $header-font-color: $white;
+     $header-line-height: 1.4;
+     $header-top-margin: .2rem;
+     $header-bottom-margin: .5rem;
+     $header-text-rendering: optimizeLegibility;
+
+}
+ // header font
+h2 h5{
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 400;
+      color: $primary-color;
+}
+
+// Hours of Operation
+.hours h2 h4 h5 {
+  color: $primary-color;
+}
+
+// makes google maps responsive
+.google-maps {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+.google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+}
+
+// table centering 
+
+.centerTable { 
+     margin: 0px auto;
+     position: relative;
+     
+     height: 0;
+     overflow: hidden;
+    
+}
+
+// footer styling 
+footer {
+  padding: 2em 0;
+  margin: 3em 0;
+  border-top: 1px solid #ddd;
+  color: #999;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.floatleft {
+  margin: 0 1em 1em 0;
+  float: left;
+}
+.floatright {
+  margin: 0 0em 1em 1em;
+  float: right;
+}
+.topspace {
+  padding-top: emCalc(68);
+}
+
+
+
+// Notice    redirect from old site
+.notice {
+     background-color: scale-color($primary-color, $lightness: -14%);
+}
+
+
+
